@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.projects {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.project-item h3 {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.project-item h4 {
+    text-align: center;
+    margin: 0; /* Marjı sıfırla */
+    position: relative;
+    bottom: -10px; /* Alt kenardan yukarıya doğru 10 birim hareket ettir */
+}
+
+.project-grid {
+    display: flex;
+    justify-content: center; /* Ortala */
+    flex-wrap: wrap;
+}
+
+.project-item {
+    background-color: #eee;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px; /* Her bir proje öğesi arasında boşluk */
+    width: 350px; /* Genişlik */
+    text-align: center;
+}
+
+.project-item img {
+    max-width: 100%;
+    border-radius: 8px;
+    cursor: pointer; /* Tıklanabilir olduğunu göstermek için */
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Modal başlangıçta görünmez */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.project-image {
+    max-width: 100%; /* Resmi kapsayan alanın maksimum genişliği */
+    height: auto; /* Orantılı yükseklik ayarı */
+    object-fit: cover; /* Resmi alanı kaplayacak şekilde kesmek için */
+    object-fit: cover; /* Görselin orantısını korur, keser */
+    border-radius: 10px; /* İsteğe bağlı: köşeleri yuvarlamak için */
+    transition: transform 0.3s; /* Hover etkisi için geçiş süresi */
+}
+
+.project-image:hover {
+    transform: scale(1.1); /* Üzerine gelindiğinde görselin büyümesi */
+}
+
+.tech-icons {
+    margin-top: 10px; /* Proje tanımının altında biraz boşluk */
+    display: flex; /* Flexbox ile hizalama */
+    justify-content: center; /* Yatayda ortala */
+    align-items: center; /* Dikeyde ortala (isteğe bağlı) */
+    flex-wrap: wrap; /* İkonlar alan yetmediğinde bir alt satıra geçsin */
+    gap: 10px; /* İkonlar arasında boşluk */
+}
+
+.tech-icon {
+    width: 50px; /* İkonun genişliği */
+    height: 50px; /* İkonun yüksekliği */
+    object-fit: cover; /* İkonun orantısını korur */
+}
+
+.project-text {
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .project-text:hover {
+    color: #007BFF;
+  }
+
+  

@@ -1,7 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolyo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <div class="container">
+            <h1 data-lang="en">My Portfolio</h1>
+            <h1 data-lang="tr" style="display:none;">Portfolyo</h1>
+            <p data-lang="en">Welcome to my collection of projects</p>
+            <p data-lang="tr" style="display:none;">Projeler koleksiyonuma hoş geldiniz</p>
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('tr')">Türkçe</button>
+        </div>
+    </header>
+
+    <section class="projects">
+        <div class="container">
+            <h2 data-lang="en">My Projects</h2>
+            <h2 data-lang="tr" style="display:none;">Projelerim</h2>
+            <div class="project-grid">
+                <div class="project-item">
+                    <h3 data-lang="en">Graduation Project</h3>
+                    <h3 data-lang="tr" style="display:none;">Bitirme Projesi</h3>
+                    <p data-lang="en">Emotion-Based Recommendation System Using Image Processing and Machine Learning.</p>
+                    <p data-lang="tr" style="display:none;">Görüntü İşleme ve Makine Öğrenmesi Kullanarak Duygu Tabanlı Tavsiye Sistemi.</p>
+                    
+                    <div class="tech-icons">
+                        <img src="res/icons/android_studio_icon.png" alt="Android Studio" class="tech-icon">
+                        <img src="res/icons/opencv_icon.png" alt="OpenCV" class="tech-icon">
+                        <img src="res/icons/tensorflow_icon.png" alt="TensorFlow" class="tech-icon">
+                        <img src="res/icons/firebase_icon.png" alt="Firebase" class="tech-icon">
+                        <img src="res/icons/gemini_icon.png" alt="Gemini" class="tech-icon">
+                        <img src="res/icons/git_icon.png" alt="Git" class="tech-icon">
+                    </div>
+
+                    <h4 data-lang="en" style="display:none;" onclick="openModal('res/images/project1/image1.png')">Images</h4>
+                    <h4 data-lang="tr" style="display:none;" onclick="openModal('res/images/project1/image1.png')">Resimler</h4>
+                </div>
+                <div class="project-item">
+                    <h3 data-lang="en">Candy Birds</h3>
+                    <h3 data-lang="tr" style="display:none;">Candy Birds</h3>
+                    <p data-lang="en">2D Game.</p>
+                    <p data-lang="tr" style="display:none;">2D Oyun.</p>
+
+                    <div class="tech-icons">
+                        <img src="res/icons/unity_icon.png" alt="Unity" class="tech-icon">
+                        <img src="res/icons/vs_icon.png" alt="VS" class="tech-icon">
+                        <img src="res/icons/json_icon.png" alt="Json" class="tech-icon">
+                        <img src="res/icons/krita_icon.png" alt="Krita" class="tech-icon">
+                        <img src="res/icons/git_icon.png" alt="Git" class="tech-icon">
+                    </div>
+                    
+                    <h4 data-lang="en" style="display:none;" onclick="openModal('res/images/project2/image1.png')">Images</h4>
+                    <h4 data-lang="tr" style="display:none;" onclick="openModal('res/images/project2/image1.png')">Resimler</h4>
+                </div>
+                <div class="project-item">
+                    <h3 data-lang="en">The Alien Wars</h3>
+                    <h3 data-lang="tr" style="display:none;">The Alien Wars</h3>
+                    <p data-lang="en">2D Game.</p>
+                    <p data-lang="tr" style="display:none;">2D Oyun.</p>
+
+                    <div class="tech-icons">
+                        <img src="res/icons/unity_icon.png" alt="Unity" class="tech-icon">
+                        <img src="res/icons/vs_icon.png" alt="VS" class="tech-icon">
+                        <img src="res/icons/json_icon.png" alt="Json" class="tech-icon">
+                        <img src="res/icons/krita_icon.png" alt="Krita" class="tech-icon">
+                        <img src="res/icons/git_icon.png" alt="Git" class="tech-icon">
+                    </div>
+                    
+                    <h4 data-lang="en" style="display:none;" onclick="openModal('res/images/project3/image1.png')">Images</h4>
+                    <h4 data-lang="tr" style="display:none;" onclick="openModal('res/images/project3/image1.png')">Resimler</h4>
+                </div>
+                <div class="project-item">
+                    <h3 data-lang="en">Journey</h3>
+                    <h3 data-lang="tr" style="display:none;">Journey</h3>
+                    <p data-lang="en">3D FPS Game.</p>
+                    <p data-lang="tr" style="display:none;">3D FPS Oyunu.</p>
+
+                    <div class="tech-icons">
+                        <img src="res/icons/unity_icon.png" alt="Unity" class="tech-icon">
+                        <img src="res/icons/vs_icon.png" alt="VS" class="tech-icon">
+                        <img src="res/icons/json_icon.png" alt="Json" class="tech-icon">
+                        <img src="res/icons/git_icon.png" alt="Git" class="tech-icon">
+                    </div>
+                    
+                    <h4 data-lang="en" style="display:none;" onclick="openModal('res/images/project4/image1.png')">Images</h4>
+                    <h4 data-lang="tr" style="display:none;" onclick="openModal('res/images/project4/image1.png')">Resimler</h4>
+                </div>
+                <div class="project-item">
+                    <h3 data-lang="en">Mount & Blade: Warband The Prince</h3>
+                    <h3 data-lang="tr" style="display:none;">Mount & Blade: Warband The Prince</h3>
+                    <p data-lang="en">Mod developed for Warband.</p>
+                    <p data-lang="tr" style="display:none;">Warband için geliştirilen mod.</p>
+
+                    <div class="tech-icons">
+                        <img src="res/icons/python_icon.png" alt="Unity" class="tech-icon">
+                        <img src="res/icons/vs_icon.png" alt="VS" class="tech-icon">
+                        <img src="res/icons/git_icon.png" alt="Git" class="tech-icon">
+                    </div>
+                    
+                    <h4 data-lang="en" style="display:none;" onclick="openModal('res/images/project5/image1.png')">Images</h4>
+                    <h4 data-lang="tr" style="display:none;" onclick="openModal('res/images/project5/image1.png')">Resimler</h4>
+                </div>
+
+                <div class="project-item">
+                    <h3 data-lang="en">2D Platformer Tutorial</h3>
+                    <h3 data-lang="tr" style="display:none;">2D Platformer Eğitimi</h3>
+                    <p data-lang="en">2D Game.</p>
+                    <p data-lang="tr" style="display:none;">2D Oyun.</p>
+
+                    <div class="tech-icons">
+                        <img src="res/icons/java_icon.png" alt="Java" class="tech-icon">
+                        <img src="res/icons/eclipse_icon.png" alt="Eclipse" class="tech-icon">
+                        <img src="res/icons/git_icon.png" alt="Git" class="tech-icon">
+                    </div>
+                    
+                    <h4 data-lang="en" style="display:none;" onclick="openModal('res/images/project6/image1.png')">Images</h4>
+                    <h4 data-lang="tr" style="display:none;" onclick="openModal('res/images/project6/image1.png')">Resimler</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+        <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+        <a class="next" onclick="changeImage(1)">&#10095;</a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p data-lang="en">&copy; 2024 okadonmez</p>
+            <p data-lang="tr" style="display:none;">&copy; 2024 okadonmez</p>
+        </div>
+    </footer>
 </body>
 </html>

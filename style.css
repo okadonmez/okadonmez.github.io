@@ -151,7 +151,7 @@ header {
     text-align: center;
     cursor: pointer;
     transition: color 0.3s ease;
-  }
+}
 
   .project-text:hover {
     color: #007BFF;
